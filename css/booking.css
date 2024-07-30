@@ -1,0 +1,257 @@
+/* Font elegan dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Reset beberapa gaya default */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 1.5rem;
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Mencegah overflow horizontal */
+}
+
+/* Header */
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 0.5rem 2rem; /* Sesuaikan padding header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Logo */
+.logo img {
+    margin-top: 20px;
+    max-height: 80px;
+}
+
+/* Navigasi */
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    background-color: #4a3c2c;
+    border-radius: 5px;
+}
+
+/* Gaya untuk tautan Pesan Sekarang */
+nav ul li .btn-book-now {
+    background-color: white;
+    color: #6d4c41;
+    padding: 0.75rem 1.5rem; /* Mengubah padding agar sejajar dengan navigasi lainnya */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li .btn-book-now:hover {
+    background-color: #4a3c2c;
+    color: white;
+}
+
+/* Dropdown Menu */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6d4c41;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    width: 200px; /* Sesuaikan lebar dropdown menu */
+    z-index: 1000; /* Menetapkan z-index yang tinggi untuk dropdown menu */
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav .dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    transition: background-color 0.3s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #4a3c2c;
+}
+
+/* Main Content */
+main {
+    margin-top: 100px; /* Untuk memberi ruang di bawah header tetap */
+    padding: 2rem;
+}
+
+.booking-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.booking-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.booking-form,
+.hotel-info {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.booking-form h2,
+.hotel-info h2 {
+    margin-bottom: 1rem;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.booking-form button {
+    background-color: #6d4c41;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #5a3c2f;
+}
+
+.hotel-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hotel-info li {
+    margin-bottom: 0.5rem;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 2rem;
+}
+
+.gallery h2 {
+    padding-bottom: 20px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery-images img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+/* Animasi untuk formulir setelah dikirim */
+form.submitted {
+    opacity: 0.5;
+    transition: opacity 1s ease-out;
+}
+
+
+/* Footer */
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+}

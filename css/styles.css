@@ -1,0 +1,564 @@
+/* Font elegan dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Reset beberapa gaya default */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 7.5rem;
+    font-family: 'Roboto Slab', serif; /* Menggunakan Roboto Slab untuk teks umum */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Mencegah overflow horizontal */
+}
+
+/* Header */
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 0.5rem 2rem; /* Sesuaikan padding header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Logo */
+.logo img {
+    margin-top: 20px;
+    max-height: 80px;
+}
+
+/* Navigasi */
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    background-color: #4a3c2c;
+    border-radius: 5px;
+}
+
+/* Gaya untuk tautan Pesan Sekarang */
+nav ul li .btn-book-now {
+    background-color: white;
+    color: #6d4c41;
+    padding: 0.75rem 1.5rem; /* Mengubah padding agar sejajar dengan navigasi lainnya */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li .btn-book-now:hover {
+    background-color: #4a3c2c;
+    color: white;
+}
+
+/* Dropdown Menu */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6d4c41;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    width: 200px; /* Sesuaikan lebar dropdown menu */
+    z-index: 1000; /* Menetapkan z-index yang tinggi untuk dropdown menu */
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav .dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    transition: background-color 0.3s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #4a3c2c;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+/* Intro Section */
+.intro {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    overflow: hidden; /* Ensure the content doesn’t overflow */
+}
+
+.intro-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cover the entire section */
+    object-fit: cover; /* Ensure image covers the section without distortion */
+    z-index: -1; /* Place behind the text */
+}
+
+.intro-content {
+    position: relative;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+
+.intro-content h1 {
+    font-size: 2rem; /* Sesuaikan ukuran huruf */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    border-bottom: none; /* Menghapus garis bawah pada heading */
+}
+
+/* Carousel */
+.room-carousel h2{
+    color: #6d4c41;
+    margin-bottom: 20px;
+}
+
+.carousel-wrapper {
+    overflow-x: auto;
+    display: flex;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    cursor: default;
+    height: 550px;
+    scroll-behavior: smooth; /* Add this line */
+}
+
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 350px; /* Set lebar tetap untuk setiap item */
+    height: 500px; /* Panjang tetap */
+    margin-right: 20px; /* Ruang antar kotak */
+    scroll-snap-align: center;
+    background-color: #f5f5f5; /* Warna latar belakang untuk visualisasi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sedikit bayangan untuk depth */
+    border-radius: 10px;
+    position: relative;
+    scroll-snap-stop: always; /* Stop scroll di item */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 70%; /* Menyisakan ruang untuk deskripsi */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    pointer-events: none;
+}
+
+.carousel-item .description {
+    padding: 10px;
+    height: 30%; /* Menyesuaikan sisa ruang untuk deskripsi */
+    overflow: hidden;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Hide scrollbar for webkit browsers */
+.carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-wrapper:hover {
+    cursor: default;
+}
+
+.carousel-wrapper * {
+    -webkit-user-select: none; /* Mencegah pemilihan teks pada WebKit browser */
+    -moz-user-select: none; /* Mencegah pemilihan teks pada Firefox */
+    -ms-user-select: none; /* Mencegah pemilihan teks pada Internet Explorer/Edge */
+}
+
+/* Facilities */
+/* Section Facilities */
+.facilities {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #6d4c41;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.facilities h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* Warna teks untuk judul */
+}
+
+/* Flex container for individual facilities */
+.facility {
+    display: flex;
+    align-items: center;
+    flex: 0 1 calc(50% - 20px); /* Lebar item sekitar 50% dari kontainer, minus jarak */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff; /* Warna latar belakang item */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sedikit bayangan untuk kedalaman */
+    overflow: hidden; /* Menghindari overflow konten */
+    box-sizing: border-box; /* Menghindari padding dan margin menambah ukuran */
+}
+
+/* Facility Image */
+.facility img {
+    width: 300px; /* Lebar gambar */
+    height: 200px; /* Tinggi gambar */
+    object-fit: cover; /* Mengatur gambar agar menutupi area */
+    border-radius: 10px; /* Sudut membulat untuk gambar */
+    margin-right: 20px; /* Ruang antara gambar dan deskripsi */
+}
+
+/* Facility Info */
+.facility-info {
+    flex: 1;
+}
+
+.facility-info h3 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333; /* Warna teks untuk judul */
+}
+
+.facility-info p {
+    margin: 10px 0 0;
+    color: #666; /* Warna teks untuk deskripsi */
+}
+
+
+/* Section Lokasi */
+.location {
+    margin-bottom: 30px;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Warna latar belakang ringan */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    text-align: center;
+}
+
+.location h2 {
+    font-size: 2.5em;
+    color: #6D4C41; /* Warna yang kontras dengan latar belakang */
+    margin-bottom: 20px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Spasi antara teks dan gambar */
+}
+
+.location-text {
+    flex: 1;
+    text-align: left; /* Teks rata kiri untuk alamat */
+}
+
+.location-info p {
+    width: 80%;
+    margin-left: 100px;
+    font-size: 1.2em;
+    color: #333; /* Warna teks gelap */
+    margin-bottom: 50px;
+    line-height: 1.6; /* Jarak baris untuk keterbacaan */
+}
+
+.location-info p:last-child {
+    font-size: 1em;
+    color: #666; /* Warna teks untuk alamat */
+    font-weight: bold;
+}
+
+.location-info img {
+    flex: 1;
+    margin-right: 100px;
+    width: 100%;
+    max-width: 400px; /* Lebar maksimum gambar */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Bayangan halus untuk gambar */
+}
+
+/* Penawaran Kami */
+.offers {
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Warna latar belakang putih */
+    text-align: center;
+}
+
+.offers h2 {
+    font-size: 2.5em;
+    color: #6D4C41; /* Warna yang kontras dengan latar belakang */
+    margin-bottom: 20px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 350px); /* 2 kolom dengan lebar 350px masing-masing */
+    grid-template-rows: repeat(2, auto); /* 2 baris dengan tinggi otomatis sesuai konten */
+    gap: 20px; /* Jarak antara kotak */
+    justify-content: center; /* Tengah-tengah di dalam kontainer */
+    margin-bottom: 20px;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Bayangan untuk kartu penawaran */
+}
+
+.offer img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee; /* Garis pemisah */
+}
+
+.offer-info {
+    padding: 20px;
+    background-color: #f5f5f5; /* Warna latar belakang informasi */
+    color: #333; /* Warna teks */
+    font-size: 1.2em;
+}
+
+.offer-info p {
+    margin: 0;
+    line-height: 1.6; /* Jarak baris untuk keterbacaan */
+}
+
+.view-more-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #6D4C41; /* Warna latar belakang tombol */
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan tombol */
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #5b4032; /* Warna tombol saat hover */
+}
+
+/* Booking Form */
+.booking-form-container {
+    margin-bottom: 2rem;
+    margin-top: 2rem; /* Jarak antara konten intro dan form booking */
+    display: flex;
+    justify-content: center; /* Memusatkan form di dalam kontainer */
+}
+
+#booking-form {
+    display: flex;
+    flex-wrap: wrap; /* Membuat form responsif jika lebar kecil */
+    gap: 1rem; /* Jarak antara elemen form */
+    max-width: 1200px; /* Atur lebar maksimal form */
+    padding: 1rem;
+    background-color: #fff; /* Latar belakang putih */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+}
+
+.form-group {
+    flex: 1 1 200px; /* Mengatur lebar elemen form */
+    margin-bottom: 1rem;
+    position: relative; /* Posisi relatif untuk label */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc; /* Border abu-abu untuk input */
+    border-radius: 4px; /* Sudut membulat untuk input */
+    box-sizing: border-box; /* Menghindari padding menambah lebar total */
+}
+
+.form-group input::placeholder {
+    color: #999; /* Warna placeholder */
+}
+
+.btn-submit {
+    flex: 1 1 100%; /* Membuat tombol memanjang */
+    background-color: #6d4c41; /* Warna latar belakang sesuai tema */
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem; /* Jarak atas untuk tombol */
+}
+
+.btn-submit:hover {
+    background-color: #5b4032; /* Warna saat hover */
+}
+
+/* Button for more offers */
+.btn-more-offers {
+    display: inline-block;
+    background-color: #6d4c41;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.btn-more-offers:hover {
+    background-color: #4a3c2c;
+}
+
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fadein.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gaya untuk prompt registrasi */
+.registration-prompt {
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.registration-prompt h2 {
+    font-size: 2rem;
+    color: #6d4c41; /* Warna tema */
+    margin-bottom: 1rem;
+}
+
+.registration-prompt p {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.btn-register {
+    display: inline-block;
+    background-color: #6d4c41; /* Warna tema */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #5b4032;
+}
+
+
+/* Footer */
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nusantara - Pembayaran</title>
+    <link rel="stylesheet" href="css/payment.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body style="background-image: url('/images/bghotel.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <header>
+        <div class="logo">
+            <img src="images/NUSANTARA-putih.svg" alt="Hotel Nusantara Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html" id="rooms-link">Kamar</a>
+                    <ul class="dropdown-menu" id="rooms-menu">
+                        <li><a href="rooms.html#executive-1">1 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-1">1 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-2">2 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-2">2 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-3">3 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-3">3 Kamar Premier</a></li>
+                        <li><a href="rooms.html#VIP">Kamar VIP</a></li>
+                        <li><a href="rooms.html#VVIP">Kamar VVIP</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="facilities.html" id="facilities-link">Fasilitas</a>
+                    <ul class="dropdown-menu" id="facilities-menu">
+                        <li><a href="facilities.html#meeting-room">Ruang Rapat</a></li>
+                        <li><a href="facilities.html#pool">Kolam Renang</a></li>
+                        <li><a href="facilities.html#gym">Gym</a></li>
+                        <li><a href="facilities.html#restaurant">Restoran</a></li>
+                        <li><a href="facilities.html#kids-playground">Taman Anak</a></li>
+                        <li><a href="facilities.html#basketball-court">Lapangan Basket</a></li>
+                    </ul>
+                </li>
+                <li><a href="offers.html">Penawaran</a></li>
+                <li><a href="booking.html" class="btn-book-now">Pesan Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="payment-container">
+            <!-- Informasi Kamar -->
+            <div class="room-info fadein">
+                <h3>Detail Kamar yang Dipesan</h3>
+                <div class="room-details">
+                    <img src="images/kamar3.jpeg" alt="Kamar Eksekutif">
+                    <div class="room-description">
+                        <p><strong>Nama Pemesan:</strong> Rian Suliyanto</p>
+                        <p><strong>Tipe Kamar:</strong> 1 Kamar Eksekutif</p>
+                        <p><strong>Jumlah Kamar:</strong> 1</p>
+                        <p><strong>Harga per Malam:</strong> Rp 1.800.000</p>
+                        <p><strong>Durasi Menginap:</strong> 3 Malam</p>
+                        <p><strong>Fasilitas:</strong> Wi-Fi gratis, TV Kabel, Mini Bar, Sarapan</p>
+                        <p><strong>Waktu Check-in:</strong> 14:00 WIB</p>
+                        <p><strong>Waktu Check-out:</strong> 12:00 WIB</p>
+                        <p><strong>Kapasitas Tamu:</strong> 4 Orang</p>
+                    </div>
+                </div>
+                <div class="total-price">
+                    <p><strong>Total Harga:</strong> Rp 5.400.000</p>
+                </div>
+            </div>
+
+            <!-- Formulir Pembayaran -->
+            <form id="payment-form">
+                <div class="payment-form fadein">
+                    <h2>Formulir Pembayaran</h2>
+                    <div class="payment-methods">
+                        <label for="payment-method">Pilih Metode Pembayaran:</label>
+                        <select id="payment-method">
+                            <option value="credit-card">Kartu Kredit</option>
+                            <option value="bank-transfer">Transfer Bank</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+
+                    <div id="credit-card-form" class="payment-detail-form">
+                        <h3>Informasi Kartu Kredit</h3>
+                        <label for="card-number">Nomor Kartu</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                        <label for="expiry-date">Tanggal Kadaluarsa</label>
+                        <input type="text" id="expiry-date" placeholder="MM/YY">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" placeholder="123">
+                    </div>
+
+                    <div id="bank-transfer-form" class="payment-detail-form" style="display: none;">
+                        <h3>Informasi Transfer Bank</h3>
+                        <label for="account-number">Nomor Rekening</label>
+                        <input type="text" id="account-number" placeholder="1234567890">
+                        <label for="bank-name">Nama Bank</label>
+                        <input type="text" id="bank-name" placeholder="Bank ABC">
+                    </div>
+
+                    <div id="paypal-form" class="payment-detail-form" style="display: none;">
+                        <h3>Informasi PayPal</h3>
+                        <label for="paypal-email">Email PayPal</label>
+                        <input type="email" id="paypal-email" placeholder="example@paypal.com">
+                    </div>
+
+                    <button type="submit" id="submit-payment">Bayar Sekarang</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Ketentuan Pembayaran -->
+        <div class="terms-of-payment fadein">
+            <h3>Ketentuan Pembayaran</h3>
+            <div class="terms-content">
+                <ul>
+                    <li>Semua pembayaran harus dilakukan dalam mata uang yang sesuai dengan tagihan.</li>
+                    <li>Pastikan informasi pembayaran yang Anda berikan akurat dan lengkap.</li>
+                    <li>Jika menggunakan kartu kredit, pastikan kartu Anda memiliki cukup saldo.</li>
+                    <li>Untuk transfer bank, harap konfirmasi pembayaran Anda melalui email.</li>
+                    <li>Biaya administrasi akan dikenakan untuk pembayaran yang dilakukan setelah batas waktu.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Informasi Tambahan -->
+        <div class="additional-info fadein">
+            <h3>Informasi Tambahan</h3>
+            <div class="info-content">
+                <p>Terima kasih telah memesan di Hotel Nusantara. Kami berharap Anda memiliki pengalaman menginap yang menyenangkan.</p>
+                <p>Jika Anda memiliki pertanyaan atau membutuhkan bantuan lebih lanjut, jangan ragu untuk menghubungi resepsionis kami. Kami siap membantu Anda 24 jam sehari.</p>
+                <div class="contact-info">
+                    <p><strong>Telepon:</strong> +62 123 4567</p>
+                    <p><strong>Email:</strong> support@hotelnusantara.com</p>
+                    <p><strong>Alamat:</strong> Jl. Hotel Nusantara No.1, Kota Nusantara, Indonesia, Kode Pos 45678</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Hotel Nusantara. Karya Rian Suliyanto.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nusantara - Registrasi Akun</title>
+    <link rel="stylesheet" href="css/registrasi.css">
+    <script src="js/scripts.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body style="background-image: url(/images/bgregister.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
+    <header>
+        <div class="logo">
+            <img src="images/NUSANTARA-putih.svg" alt="Hotel Nusantara Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html" id="rooms-link">Kamar</a>
+                    <ul class="dropdown-menu" id="rooms-menu">
+                        <!-- Daftar kamar -->
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="facilities.html" id="facilities-link">Fasilitas</a>
+                    <ul class="dropdown-menu" id="facilities-menu">
+                        <!-- Daftar fasilitas -->
+                    </ul>
+                </li>
+                <li><a href="offers.html">Penawaran</a></li>
+                <li><a href="booking.html" class="btn-book-now">Pesan Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="registration-form-container">
+            <h1>Daftar Akun Baru</h1>
+            <form id="registration-form">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Nama Pengguna" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Kata Sandi" required>
+                </div>
+                <button type="submit" class="btn-register">Daftar</button>
+            </form>
+            <p class="login-redirect">Sudah punya akun? <a href="login.html" id="login-now">Masuk sekarang</a></p>
+        </section>
+
+        <section class="benefits-container">
+            <h2>Keuntungan Menjadi Member</h2>
+            <ul>
+                <li>Diskon eksklusif untuk semua pemesanan kamar.</li>
+                <li>Akses prioritas ke penawaran spesial dan promo terbaru.</li>
+                <li>Bonus poin reward setiap kali Anda melakukan pemesanan.</li>
+                <li>Gratis upgrade kamar pada kunjungan berikutnya (tergantung ketersediaan).</li>
+                <li>Prioritas dalam reservasi fasilitas hotel seperti spa dan restoran.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hotel Nusantara. Karya Rian Suliyanto.</p>
+    </footer>
+</body>
+</html>

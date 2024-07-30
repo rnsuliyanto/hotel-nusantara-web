@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nusantara - Pemesanan</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/NUSANTARA-putih.svg" alt="Hotel Nusantara Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html" id="rooms-link">Kamar</a>
+                    <ul class="dropdown-menu" id="rooms-menu">
+                        <li><a href="rooms.html#executive-1">1 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-1">1 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-2">2 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-2">2 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-3">3 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-3">3 Kamar Premier</a></li>
+                        <li><a href="rooms.html#VIP">Kamar VIP</a></li>
+                        <li><a href="rooms.html#VVIP">Kamar VVIP</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="facilities.html" id="facilities-link">Fasilitas</a>
+                    <ul class="dropdown-menu" id="facilities-menu">
+                        <li><a href="facilities.html#meeting-room">Ruang Rapat</a></li>
+                        <li><a href="facilities.html#pool">Kolam Renang</a></li>
+                        <li><a href="facilities.html#gym">Gym</a></li>
+                        <li><a href="facilities.html#restaurant">Restoran</a></li>
+                        <li><a href="facilities.html#kids-playground">Taman Anak</a></li>
+                        <li><a href="facilities.html#basketball-court">Lapangan Basket</a></li>
+                    </ul>
+                </li>
+                <li><a href="offers.html">Penawaran</a></li>
+                <li><a href="booking.html" class="btn-book-now">Pesan Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="booking-content">
+            <div class="booking-wrapper fadein">
+                <div class="booking-form">
+                    <h2>Formulir Pemesanan</h2>
+                    <form action="payment.html" method="post" id="booking-form">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        
+                        <label for="room-type">Tipe Kamar</label>
+                        <select id="room-type" name="room-type" required>
+                            <option value="executive-1">1 Kamar Eksekutif</option>
+                            <option value="premier-1">1 Kamar Premier</option>
+                            <option value="executive-2">2 Kamar Eksekutif</option>
+                            <option value="premier-2">2 Kamar Premier</option>
+                            <option value="executive-3">3 Kamar Eksekutif</option>
+                            <option value="premier-3">3 Kamar Premier</option>
+                            <option value="VIP">Kamar VIP</option>
+                            <option value="VVIP">Kamar VVIP</option>
+                        </select>
+
+                        <label for="check-in-date">Tanggal Check-in</label>
+                        <input type="date" id="check-in-date" name="check-in-date" required>
+
+                        <label for="check-out-date">Tanggal Check-out</label>
+                        <input type="date" id="check-out-date" name="check-out-date" required>
+
+                        <label for="num-rooms">Jumlah Kamar</label>
+                        <input type="number" id="num-rooms" name="num-rooms" min="1" value="1" required>
+                        
+                        <label for="num-guests">Jumlah Tamu</label>
+                        <input type="number" id="num-guests" name="num-guests" min="1" value="1" required>
+                        
+                        <button type="submit">Lanjutkan ke Pembayaran</button>
+                    </form>
+                </div>
+
+                <div class="hotel-info">
+                    <section class="hotel-rules">
+                        <h2>Aturan dan Kebijakan Hotel</h2>
+                        <ul>
+                            <li><strong>Check-in:</strong> Mulai pukul 14:00 WIB</li>
+                            <li><strong>Check-out:</strong> Sebelum pukul 12:00 WIB</li>
+                            <li><strong>Kebijakan Pembatalan:</strong> Pembatalan gratis jika dilakukan 24 jam sebelum tanggal check-in. Pembatalan di bawah 24 jam dikenakan biaya satu malam.</li>
+                            <li><strong>Kebijakan Anak-anak dan Tempat Tidur Ekstra:</strong> Anak-anak di bawah usia 12 tahun dapat menginap gratis jika menggunakan tempat tidur yang ada. Tempat tidur tambahan tersedia dengan biaya tambahan, tergantung pada tipe kamar.</li>
+                            <li><strong>Kebijakan Merokok dan Hewan Peliharaan:</strong> Dilarang merokok di area kamar dan area umum dalam hotel. Hewan peliharaan tidak diperbolehkan kecuali dengan izin khusus dan dikenakan biaya tambahan.</li>
+                            <li><strong>Kebijakan Deposit:</strong> Deposit sebesar 20% dari total biaya menginap diperlukan saat pemesanan. Deposit tidak dapat dikembalikan jika pembatalan dilakukan setelah 24 jam sebelum check-in.</li>
+                            <li><strong>Kebijakan Pembayaran:</strong> Pembayaran penuh harus dilakukan pada saat check-in. Kami menerima pembayaran dengan kartu kredit, debit, dan uang tunai.</li>
+                            <li><strong>Kebijakan Pendaftaran Tamu:</strong> Tamu wajib menunjukkan identitas diri yang sah pada saat check-in. Identitas yang diterima termasuk KTP, SIM, atau paspor.</li>
+                            <li><strong>Kebijakan Parkir:</strong> Parkir tersedia gratis untuk tamu hotel. Hotel tidak bertanggung jawab atas kehilangan atau kerusakan kendaraan.</li>
+                            <li><strong>Kebijakan Layanan Kamar:</strong> Layanan kamar tersedia 24 jam. Menu layanan kamar dapat ditemukan di kamar dan di resepsionis.</li>
+                            <li><strong>Kebijakan Kebersihan:</strong> Kami berkomitmen untuk menjaga kebersihan dan keamanan. Layanan pembersihan kamar dilakukan setiap hari. Jika Anda tidak memerlukan pembersihan kamar, beri tahu resepsionis.</li>
+                            <li><strong>Kebijakan Keamanan:</strong> Untuk keamanan Anda, semua pintu kamar dilengkapi dengan kunci elektronik. Mohon pastikan pintu kamar terkunci saat meninggalkan kamar.</li>
+                            <li><strong>Kebijakan Acara dan Pertemuan:</strong> Fasilitas untuk acara dan pertemuan tersedia berdasarkan permintaan. Harap hubungi resepsionis untuk informasi lebih lanjut dan pemesanan.</li>
+                            <li><strong>Kebijakan Wi-Fi:</strong> Akses Wi-Fi gratis tersedia di seluruh area hotel. Jika Anda mengalami masalah dengan koneksi, harap hubungi layanan pelanggan kami.</li>
+                            <li><strong>Kebijakan Penggunaan Fasilitas:</strong> Penggunaan fasilitas hotel seperti kolam renang dan gym tunduk pada aturan dan jadwal tertentu. Harap mematuhi petunjuk yang diberikan oleh staf hotel.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            <section class="gallery fadein">
+                <h2>Galeri Kamar</h2>
+                <div class="gallery-images">
+                    <img src="images/kamar1.jpg" alt="Kamar Eksekutif" class="fadein">
+                    <img src="images/kamar4.jpeg" class="fadein" alt="Kamar Premier">
+                    <img src="images/kamar2.jpeg" class="fadein" alt="Kamar Eksekutif">
+                    <img src="images/kamar3.jpeg" class="fadein" alt="Kamar Premier">
+                    <img src="images/kamar6.jpeg" class="fadein" alt="Kamar Eksekutif">
+                    <img src="images/kamar5.jpeg" class="fadein" alt="Kamar Premier">
+                    <img src="images/kamar7.jpeg" class="fadein" alt="Kamar Eksekutif">
+                    <img src="images/kamar8.jpeg" class="fadein" alt="Kamar Premier">
+                    <img src="images/kamar1.jpg" class="fadein" alt="Kamar Eksekutif">
+                    <img src="images/kamar4.jpeg" class="fadein" alt="Kamar Premier">
+                </div>
+            </section>
+
+            <section class="contact-info fadein">
+                <h2>Kontak Darurat</h2>
+                <p>Untuk informasi lebih lanjut atau jika Anda memerlukan bantuan selama menginap di Hotel Nusantara, jangan ragu untuk menghubungi kami di nomor darurat berikut: +62 123 4567 890. Kami tersedia 24 jam sehari untuk memastikan pengalaman menginap Anda berjalan lancar dan nyaman. Apakah Anda menghadapi masalah atau membutuhkan informasi tambahan mengenai layanan hotel kami, tim kami siap membantu Anda dengan cepat dan efisien. Jangan ragu untuk menghubungi kami kapan saja.</p>
+            </section>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Hotel Nusantara. Karya Rian Suliyanto.</p>
+    </footer>
+</body>
+</html>

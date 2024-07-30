@@ -1,0 +1,191 @@
+/* Font elegan dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Reset beberapa gaya default */
+body, h1, h2, h3, p, ul, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 7.5rem; /* Space for the fixed header */
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header */
+header {
+    background-color: #6d4c41;
+    color: white;
+    padding: 0.5rem 2rem; /* Sesuaikan padding header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Logo */
+.logo img {
+    margin-top: 20px;
+    max-height: 80px;
+}
+
+/* Navigasi */
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    background-color: #4a3c2c;
+    border-radius: 5px;
+}
+
+/* Gaya untuk tautan Pesan Sekarang */
+nav ul li .btn-book-now {
+    background-color: white;
+    color: #6d4c41;
+    padding: 0.75rem 1.5rem; /* Mengubah padding agar sejajar dengan navigasi lainnya */
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+nav ul li .btn-book-now:hover {
+    background-color: #4a3c2c;
+    color: white;
+}
+
+/* Dropdown Menu */
+nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6d4c41;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    width: 200px; /* Sesuaikan lebar dropdown menu */
+    z-index: 1000; /* Menetapkan z-index yang tinggi untuk dropdown menu */
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav .dropdown-menu a {
+    padding: 0.75rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Slab', serif;
+    transition: background-color 0.3s ease;
+}
+
+nav .dropdown-menu a:hover {
+    background-color: #4a3c2c;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+/* Fasilitas Grid */
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.facility-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+}
+
+.facility-item img {
+    width: 100%;
+    height: auto; /* Pastikan gambar tidak pecah */
+    max-height: 200px; /* Batasi tinggi gambar untuk mencegah blur */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.facility-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6D4C41; /* Warna judul fasilitas */
+}
+
+.facility-item p {
+    color: #666;
+}
+
+/* Judul Halaman */
+main h1 {
+    font-size: 2.5rem;
+    color: #6D4C41; /* Sesuaikan warna dengan tema */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Roboto Slab', serif; /* Font elegan */
+}
+
+
+/* Footer */
+footer {
+    background-color: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+}

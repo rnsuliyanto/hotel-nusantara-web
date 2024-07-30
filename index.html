@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nusantara - Beranda</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/NUSANTARA-putih.svg" alt="Hotel Nusantara Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="rooms.html" id="rooms-link">Kamar</a>
+                    <ul class="dropdown-menu" id="rooms-menu">
+                        <li><a href="rooms.html#executive-1">1 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-1">1 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-2">2 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-2">2 Kamar Premier</a></li>
+                        <li><a href="rooms.html#executive-3">3 Kamar Eksekutif</a></li>
+                        <li><a href="rooms.html#premier-3">3 Kamar Premier</a></li>
+                        <li><a href="rooms.html#VIP">Kamar VIP</a></li>
+                        <li><a href="rooms.html#VVIP">Kamar VVIP</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="facilities.html" id="facilities-link">Fasilitas</a>
+                    <ul class="dropdown-menu" id="facilities-menu">
+                        <li><a href="facilities.html#meeting-room">Ruang Rapat</a></li>
+                        <li><a href="facilities.html#pool">Kolam Renang</a></li>
+                        <li><a href="facilities.html#gym">Gym</a></li>
+                        <li><a href="facilities.html#restaurant">Restoran</a></li>
+                        <li><a href="facilities.html#kids-playground">Taman Anak</a></li>
+                        <li><a href="facilities.html#basketball-court">Lapangan Basket</a></li>
+                    </ul>
+                </li>
+                <li><a href="offers.html">Penawaran</a></li>
+                <li><a href="booking.html" class="btn-book-now">Pesan Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <img src="images/intro.jpg" alt="Latar Belakang Selamat Datang" class="intro-background">
+        <div class="intro-content fadein">
+            <h1>Selamat Datang di Hotel Nusantara</h1>
+            <p>Hotel Nusantara menawarkan pengalaman menginap yang mewah dengan layanan terbaik di kota. Nikmati kenyamanan dan kemewahan dengan berbagai fasilitas kami yang lengkap.</p>
+        </div>
+        <div class="booking-form-container fadein">
+            <form id="booking-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="checkin" name="checkin" placeholder="Tanggal Check-In" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="checkout" name="checkout" placeholder="Tanggal Check-Out" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="rooms" name="rooms" placeholder="Jumlah Kamar" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="guests" name="guests" placeholder="Jumlah Tamu" required>
+                </div>
+                <button type="submit" class="btn-submit">Pesan Sekarang</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    
+    <main>
+        <!-- Tombol Registrasi -->
+        <div class="registration-prompt fadein">
+            <h2>Ingin Menjadi Anggota?</h2>
+            <p>Daftar dan nikmati berbagai keuntungan eksklusif sebagai member Hotel Nusantara!</p>
+            <a href="registrasi.html" class="btn-register">Buat Akun Sekarang</a>
+        </div>
+
+        <section class="room-carousel fadein">
+            <h2>Tipe Kamar</h2>
+            <div class="carousel-wrapper fadein">
+                <div class="carousel-slide fadein">
+                    <div class="carousel-item">
+                        <img src="images/kamar1.jpg" alt="Kamar Eksekutif 1">
+                        <div class="description">
+                            <h3>Kamar Eksekutif 1</h3>
+                            <p>1 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan view yang indah dengan maksimal 3 tamu.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar4.jpeg" alt="Kamar Premier 1">
+                        <div class="description">
+                            <h3>Kamar Premier 1</h3>
+                            <p>1 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan maksimal 3 tamu.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar3.jpeg" alt="Kamar Eksekutif 2">
+                        <div class="description">
+                            <h3>Kamar Eksekutif 2</h3>
+                            <p>2 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan view yang indah dengan maksimal 6 tamu.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar2.jpeg" alt="Kamar Premier 2">
+                        <div class="description">
+                            <h3>Kamar Premier 2</h3>
+                            <p>2 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan dengan maksimal 6 tamu dan tambahan extra bed.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar5.jpeg" alt="Kamar Eksekutif 1">
+                        <div class="description">
+                            <h3>Kamar Eksekutif 3</h3>
+                            <p>3 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan view yang indah dengan maksimal 8 tamu.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar6.jpeg" alt="Kamar Premier 1">
+                        <div class="description">
+                            <h3>Kamar Premier 3</h3>
+                            <p>3 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan harga terbaik dengan maksimal 8 tamu.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar7.jpeg" alt="Kamar Eksekutif 2">
+                        <div class="description">
+                            <h3>Kamar VIP</h3>
+                            <p>3 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan view yang indah dengan ruangan yang luas dengan halaman outdoor.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/kamar8.jpeg" alt="Kamar Premier 2">
+                        <div class="description">
+                            <h3>Kamar VVIP</h3>
+                            <p>3 Kamar Tidur dengan fasilitas lengkap dan nyaman dengan view yang indah dengan ruangan yang luas serta halaman outdoor dan kolam renang pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="facilities fadein">
+            <h2>Fasilitas Kami</h2>
+            <div class="facility">
+                <img src="images/pool.jpeg" alt="Kolam Renang">
+                <div class="facility-info">
+                    <h3>Kolam Renang</h3>
+                    <p>Kolam renang kami menawarkan pengalaman berenang yang luar biasa dengan air yang jernih dan menyegarkan. Dikelilingi oleh pemandangan indah, kolam ini adalah tempat ideal untuk bersantai dan menikmati suasana sejuk, terutama di hari-hari panas kota.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/resto.jpeg" alt="Restoran">
+                <div class="facility-info">
+                    <h3>Restoran</h3>
+                    <p>Restoran kami menyajikan berbagai pilihan menu lezat dari masakan lokal hingga internasional dengan kualitas terbaik. Nikmati pengalaman bersantap yang memuaskan di lantai atas sambil menikmati pemandangan kota yang menakjubkan dan layanan yang ramah serta profesional.</p>
+                </div>
+            </div>
+        </section>
+                
+        <section class="location fadein">
+            <h2>Lokasi Kami</h2>
+            <div class="location-info fadein">
+                <div class="location-text ">
+                    <p>Kami terletak di jantung kota, dekat dengan tempat-tempat wisata utama dan fasilitas umum. Lokasi kami mudah diakses dan menawarkan kemudahan untuk menjelajahi berbagai atraksi menarik di sekitar, sehingga Anda dapat menikmati pengalaman yang memuaskan selama menginap.</p>
+                    <p><strong>Alamat:</strong> Jl. Hotel Nusantara No.1, Kota Nusantara, Indonesia, Kode Pos 45678</p>
+                </div>
+                <img src="images/location.jpeg" alt="Peta Lokasi">
+            </div>
+        </section>
+        
+        <section class="offers fadein">
+            <h2>Penawaran Kami</h2>
+            <div class="offers-grid">
+                <div class="offer fadein">
+                    <img src="images/20.svg" alt="Penawaran 1">
+                    <div class="offer-info">
+                        <p>Penawaran Spesial! Dapatkan diskon 20% untuk pemesanan kamar selama akhir pekan!</p>
+                    </div>
+                </div>
+                <div class="offer fadein">
+                    <img src="images/vouchermakan.jpeg" alt="Penawaran 2">
+                    <div class="offer-info">
+                        <p>Voucher Diskon 20% untuk makan malam romantis di restoran terbaik kami.</p>
+                    </div>
+                </div>
+                <div class="offer fadein">
+                    <img src="images/keluarga.jpeg" alt="Penawaran 3">
+                    <div class="offer-info">
+                        <p>Nikmati Liburan Keluarga di Hotel Nusantara! Menginap selama 3 malam dan dapatkan satu malam gratis.</p>
+                    </div>
+                </div>
+                <div class="offer fadein">
+                    <img src="images/rapat.jpeg" alt="Penawaran 4">
+                    <div class="offer-info">
+                        <p>Adakan Rapat Perusahaan di Hotel Nusantara! Dapatkan bonus paket makan siang dengan menu terbaik kami.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="offers.html" class="view-more-btn fadein">Lihat Penawaran Lainnya</a>
+        </section>
+        
+        
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Hotel Nusantara. Karya Rian Suliyanto.</p>
+    </footer>
+</body>
+</html>
